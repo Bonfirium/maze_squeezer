@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/cell.tpsheet-93210ed516bccfdea0e02fd7f3930e4d.res"
+
+[deps]
+
+files=[ "res://assets/spriteSheets/cell.sprites/black.tres", "res://assets/spriteSheets/cell.sprites/white.tres" ]
+
+source_file="res://assets/spriteSheets/cell.tpsheet"
+dest_files=[ "res://.import/cell.tpsheet-93210ed516bccfdea0e02fd7f3930e4d.res", "res://assets/spriteSheets/cell.sprites/black.tres", "res://assets/spriteSheets/cell.sprites/white.tres" ]
+
+[params]
+

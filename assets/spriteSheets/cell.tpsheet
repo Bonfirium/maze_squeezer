@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "cell.png",
+			"size": {
+				"w": 104,
+				"h": 52
+			},
+			"sprites": [
+				{
+					"filename": "black.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 50,
+						"h": 50
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "white.png",
+					"region": {
+						"x": 53,
+						"y": 1,
+						"w": 50,
+						"h": 50
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e4ac53976286002d7111e9fcf08b6570:6fa566db9718205294b05d96d81e86bb:adef664eabd5d32f89428def99451df0$"
+	}
+}
