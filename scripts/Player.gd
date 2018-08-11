@@ -18,3 +18,6 @@ func _process(delta):
 	if velocity.length() == 0:
 		pass
 	position += velocity.normalized() * delta * 256
+
+func _draw():
+	draw_circle(position, 16, Color(0, 0, 1))
