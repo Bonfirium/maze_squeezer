@@ -11,7 +11,13 @@ config_version=3
 [application]
 
 config/name="Maze-Squeezer"
+run/main_scene="res://scenes/player.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/height=1024
+window/size/resizable=false
 
 [rendering]
 
