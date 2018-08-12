@@ -11,6 +11,6 @@ func _ready():
 		for x in range(width):
 			column[x] = [false, true][randi() % 2]
 		matrix.append(column)
-	$Player.position = Vector2(rand_range(0, 512), rand_range(0, 512))
+	$Player.position = Vector2(randi() % width + 0.5, randi() % height + 0.5) * 64
 	$Player.matrix = matrix
 	$Map.matrix = matrix
