@@ -21,5 +21,8 @@ window/size/resizable=false
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/subsurface_scattering/quality=2
+quality/subsurface_scattering/follow_surface=true
 environment/default_clear_color=Color( 0.501961, 0.501961, 0.501961, 1 )
 environment/default_environment="res://default_env.tres"
