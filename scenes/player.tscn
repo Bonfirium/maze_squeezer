@@ -60,7 +60,7 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 script = ExtResource( 2 )
-_sections_unfolded = [ "Render Target", "Rendering" ]
+_sections_unfolded = [ "GUI", "Render Target", "Rendering" ]
 width = 16
 height = 16
 
