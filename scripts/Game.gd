@@ -1,4 +1,7 @@
 extends Node
+const WAY = 0
+const WALL = 1
+const STAR = 2
 export (int) var width = 16
 export (int) var height = 16
 var matrix = []
@@ -15,9 +18,26 @@ func save_matrix(temp_matrix):
 		var column = []
 		column.resize(width)
 		for x in range(width):
-			column[x] = temp_matrix[y][x] != 2
+			column[x] = WALL if temp_matrix[y][x] != 2 else WAY
 		result.append(column)
 	return result
+func shuffle(arr):
+	var size = arr.size()
+	for i in range(size):
+		var ind = randi() % size
+		var swap = arr[i]
+		arr[i] = arr[ind]
+		arr[ind] = swap
+func generate_stars(maze, count):
+	var posible_cells = []
+	for y in range(height):
+		for x in range(width):
+			if maze[y][x] == 0: posible_cells.append(Vector2(y, x))
+	if posible_cells.size() <= count: raise()
+	shuffle(posible_cells)
+	for i in range(count):
+		var pos = posible_cells[i]
+		maze[pos.y][pos.x] = STAR
 func generate_maze():
 	var temp_matrix = []
 	var pre_size = Vector2(width - 1, height - 1)
@@ -43,7 +63,9 @@ func generate_maze():
 				0:
 					temp_matrix[this_pos.y][this_pos.x] = 1
 					q.append(this_pos)
-	return save_matrix(temp_matrix)
+	var result = save_matrix(temp_matrix)
+	generate_stars(result, 5)
+	return result
 func _ready():
 	matrix = generate_maze()
 	player = $Player

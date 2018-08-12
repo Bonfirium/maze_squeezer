@@ -18,7 +18,9 @@ func is_collide(pos):
 		var is_vert = (i + 1) % 4 < 2
 		var cell_1 = grid_pos + Vector2(1 if i == 2 else 0, 1 if i == 3 else 0)
 		var cell_2 = cell_1 + Vector2(1 if is_vert else 0, 1 if not is_vert else 0)
-		if matrix[cell_1.y][cell_1.x] == matrix[cell_2.y][cell_2.x]: continue
+		var val_1 = matrix[cell_1.y][cell_1.x]
+		var val_2 = matrix[cell_2.y][cell_2.x]
+		if val_1 == val_2 or (val_1 != 1 and val_2 != 1): continue
 		var wall_from = grid_pos + Vector2(0 if i == 1 else 1, 0 if i == 0 else 1)
 		if is_vert:
 			if check_vert_collision(wall_from, pos, 0.2): return true
