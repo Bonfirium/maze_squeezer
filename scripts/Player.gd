@@ -56,9 +56,13 @@ func _process(delta):
 		velocity.y += 1
 	if velocity.length() > 0:
 		var new_pos = position + velocity.normalized() * delta * 256
-		if not is_collide(new_pos / 64):
-			position = new_pos
+		var new_pos_x = Vector2(new_pos.x, position.y)
+		if not is_collide(new_pos_x / 64):
+			position.x = new_pos.x
+		var new_pos_y = Vector2(position.x, new_pos.y)
+		if not is_collide(new_pos_y / 64):
+			position.y = new_pos.y
 
 
 func _draw():
-	draw_circle(Vector2(), 16, Color(0, 0, 1))
+	draw_circle(Vector2(), 16, Color(0.5, 0, 0))
