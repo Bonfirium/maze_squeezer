@@ -2,8 +2,7 @@ extends Node
 
 func _ready():
 	var player = $Game.player
-	print(player.position)
-	pass
+	$Deplacer.player = player
 
 func _process(delta):
 	pass
