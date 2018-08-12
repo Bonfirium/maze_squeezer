@@ -24,7 +24,6 @@ func is_collide(pos):
 			if check_vert_collision(wall_from, pos, 0.2): return true
 		elif check_hor_collision(wall_from, pos, 0.2): return true
 	return false
-func _ready(): pass
 func _process(delta):
 	var velocity = Vector2()
 	if Input.is_key_pressed(KEY_W): velocity.y -= 1

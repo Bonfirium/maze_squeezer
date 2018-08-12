@@ -1,4 +1,4 @@
-extends Area2D
+extends Node
 
 export (int) var width = 16
 export (int) var height = 16
